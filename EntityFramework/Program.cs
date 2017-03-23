@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EntityFramework
 {
@@ -10,6 +6,11 @@ namespace EntityFramework
     {
         static void Main(string[] args)
         {
+            var vidzyDbContext = new VidzyDbContext();
+
+            vidzyDbContext.AddVideo("Test", DateTime.Today, "Comedy");
+
+
         }
     }
 }
