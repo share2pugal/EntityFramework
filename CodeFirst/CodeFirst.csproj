@@ -53,39 +53,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
-    <Compile Include="Classification.cs" />
     <Compile Include="Course.cs" />
-    <Compile Include="Genre.cs" />
-    <Compile Include="Migrations\201703240536193_InitialModel.cs" />
-    <Compile Include="Migrations\201703240536193_InitialModel.Designer.cs">
-      <DependentUpon>201703240536193_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703240537489_PopulateGenreTable.cs" />
-    <Compile Include="Migrations\201703240537489_PopulateGenreTable.Designer.cs">
-      <DependentUpon>201703240537489_PopulateGenreTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703240543103_ChangedGenreFromListToFieldinVideoTable.cs" />
-    <Compile Include="Migrations\201703240543103_ChangedGenreFromListToFieldinVideoTable.Designer.cs">
-      <DependentUpon>201703240543103_ChangedGenreFromListToFieldinVideoTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703240552006_AddClassificationColumntoVideosTable.cs" />
-    <Compile Include="Migrations\201703240552006_AddClassificationColumntoVideosTable.Designer.cs">
-      <DependentUpon>201703240552006_AddClassificationColumntoVideosTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703241221332_AddedACTTables.cs" />
-    <Compile Include="Migrations\201703241221332_AddedACTTables.Designer.cs">
-      <DependentUpon>201703241221332_AddedACTTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703241236561_AddDataAnnotation.cs" />
-    <Compile Include="Migrations\201703241236561_AddDataAnnotation.Designer.cs">
-      <DependentUpon>201703241236561_AddDataAnnotation.cs</DependentUpon>
+    <Compile Include="Cover.cs" />
+    <Compile Include="Migrations\201703241259189_IntialModelFAPI.cs" />
+    <Compile Include="Migrations\201703241259189_IntialModelFAPI.Designer.cs">
+      <DependentUpon>201703241259189_IntialModelFAPI.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tag.cs" />
-    <Compile Include="Video.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -94,23 +72,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703240536193_InitialModel.resx">
-      <DependentUpon>201703240536193_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703240537489_PopulateGenreTable.resx">
-      <DependentUpon>201703240537489_PopulateGenreTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703240543103_ChangedGenreFromListToFieldinVideoTable.resx">
-      <DependentUpon>201703240543103_ChangedGenreFromListToFieldinVideoTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703240552006_AddClassificationColumntoVideosTable.resx">
-      <DependentUpon>201703240552006_AddClassificationColumntoVideosTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703241221332_AddedACTTables.resx">
-      <DependentUpon>201703241221332_AddedACTTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703241236561_AddDataAnnotation.resx">
-      <DependentUpon>201703241236561_AddDataAnnotation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703241259189_IntialModelFAPI.resx">
+      <DependentUpon>201703241259189_IntialModelFAPI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
