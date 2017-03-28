@@ -1,9 +1,9 @@
-namespace CodeFirst.Migrations
+namespace Queries.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class IntialModelFAPI : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -24,7 +24,7 @@ namespace CodeFirst.Migrations
                         Name = c.String(nullable: false, maxLength: 255),
                         Description = c.String(nullable: false, maxLength: 2000),
                         Level = c.Int(nullable: false),
-                        FullPrize = c.Single(nullable: false),
+                        FullPrice = c.Single(nullable: false),
                         AuthorId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -51,58 +51,31 @@ namespace CodeFirst.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Genres",
-                c => new
-                    {
-                        Id = c.Byte(nullable: false),
-                        Name = c.String(nullable: false, maxLength: 255),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Videos",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 255),
-                        ReleaseDate = c.DateTime(nullable: false),
-                        GenreId = c.Byte(nullable: false),
-                        Classification = c.Byte(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Genres", t => t.GenreId, cascadeDelete: true)
-                .Index(t => t.GenreId);
-            
-            CreateTable(
                 "dbo.CourseTags",
                 c => new
                     {
-                        Course_Id = c.Int(nullable: false),
-                        Tag_Id = c.Int(nullable: false),
+                        CourseId = c.Int(nullable: false),
+                        TagId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.Course_Id, t.Tag_Id })
-                .ForeignKey("dbo.Courses", t => t.Course_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Tags", t => t.Tag_Id, cascadeDelete: true)
-                .Index(t => t.Course_Id)
-                .Index(t => t.Tag_Id);
+                .PrimaryKey(t => new { t.CourseId, t.TagId })
+                .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
+                .ForeignKey("dbo.Tags", t => t.TagId, cascadeDelete: true)
+                .Index(t => t.CourseId)
+                .Index(t => t.TagId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Videos", "GenreId", "dbo.Genres");
-            DropForeignKey("dbo.CourseTags", "Tag_Id", "dbo.Tags");
-            DropForeignKey("dbo.CourseTags", "Course_Id", "dbo.Courses");
+            DropForeignKey("dbo.CourseTags", "TagId", "dbo.Tags");
+            DropForeignKey("dbo.CourseTags", "CourseId", "dbo.Courses");
             DropForeignKey("dbo.Covers", "Id", "dbo.Courses");
             DropForeignKey("dbo.Courses", "AuthorId", "dbo.Authors");
-            DropIndex("dbo.CourseTags", new[] { "Tag_Id" });
-            DropIndex("dbo.CourseTags", new[] { "Course_Id" });
-            DropIndex("dbo.Videos", new[] { "GenreId" });
+            DropIndex("dbo.CourseTags", new[] { "TagId" });
+            DropIndex("dbo.CourseTags", new[] { "CourseId" });
             DropIndex("dbo.Covers", new[] { "Id" });
             DropIndex("dbo.Courses", new[] { "AuthorId" });
             DropTable("dbo.CourseTags");
-            DropTable("dbo.Videos");
-            DropTable("dbo.Genres");
             DropTable("dbo.Tags");
             DropTable("dbo.Covers");
             DropTable("dbo.Courses");

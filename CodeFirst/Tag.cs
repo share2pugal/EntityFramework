@@ -7,6 +7,7 @@ namespace CodeFirst
         public Tag()
         {
             Courses = new HashSet<Course>();
+            Videos = new HashSet<Video>();
         }
 
         public int Id { get; set; }
@@ -14,5 +15,6 @@ namespace CodeFirst
         public string Name { get; set; }
 
         public ICollection<Course> Courses { get; set; }
+        public ICollection<Video> Videos { get; set; }
     }
 }
