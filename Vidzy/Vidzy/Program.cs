@@ -60,10 +60,10 @@ namespace Vidzy
             var listofgenres = context.Genres
                 .GroupJoin(context.Videos, g => g.Id,
                 c => c.GenreId,
-                (genre, videos) => new
+                (genre, vides) => new
                 {
                     GenreName = genre.Name,
-                    Count = videos.Count()
+                    Count = vides.Count()
                 }).OrderByDescending(v => v.Count);
 
             foreach (var item in listofgenres)
