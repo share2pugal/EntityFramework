@@ -1,5 +1,5 @@
-using System.Data.Entity;
 using Queries.EntityConfigurations;
+using System.Data.Entity;
 
 namespace Queries
 {
@@ -8,6 +8,7 @@ namespace Queries
         public PlutoContext()
             : base("name=PlutoContext")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Author> Authors { get; set; }

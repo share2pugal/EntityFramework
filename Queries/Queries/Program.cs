@@ -204,6 +204,14 @@ namespace Queries
             conetxt.Courses.Average(cc => cc.FullPrice);
 
 
+            var csdas = conetxt.Courses.Single(c => c.Id == 2);
+
+            foreach (var item in csdas.Tags)
+            {
+                System.Console.WriteLine("rr :" + item.Name);
+            }
+
+
 
         }
     }

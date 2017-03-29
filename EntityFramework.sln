@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidzy", "Vidzy\Vidzy\Vidzy.csproj", "{2AEE16B3-AFD2-4C91-9751-E37310E4689C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidzyCRUD", "VidzyCRUD\Vidzy\VidzyCRUD.csproj", "{4BF524B8-84C3-412F-B320-02F8A3E12475}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF524B8-84C3-412F-B320-02F8A3E12475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF524B8-84C3-412F-B320-02F8A3E12475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF524B8-84C3-412F-B320-02F8A3E12475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF524B8-84C3-412F-B320-02F8A3E12475}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

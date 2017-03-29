@@ -16,9 +16,5 @@ namespace Vidzy
             
             base.OnModelCreating(modelBuilder);
         }
-        public VidzyContext()
-        {
-            this.Configuration.LazyLoadingEnabled = false;
-        }
     }
 }
